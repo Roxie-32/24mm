@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <a href="google.com" target="_self">Google</a><br>
+    <a href="yahoo.com" target="_her">Google</a>    
+    <div class="readydemo"></div>
+    <input type="text" name="username">
+
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        //$ and jquery
+      /*   console.log($);
+        console.log(jQuery);
+        console.log($==jQuery);//they return same function and theyre objects
+ */
+
+        //ready function
+       /*  console.log('Doc is yet ready');
+
+        $(document).ready(function() {
+            console.log('Doc is ready');
+        });
+        console.log('Doc is to be ready'); */
+
+
+        //using ready modify elements of the doc
+       /*  $(document).ready(function() {
+            $('#readydemo').text('WebPage is ready!');
+            //the above displays the text in dat divwen doc is ready
+        }); */
+
+        //jquey function chaining
+   /*      $(document).ready(function() {
+            $('#readydemo').text('WebPage is ready!').css('color','blue').css('font-weight','700').css('color','red').fadeOut("slow") ;
+            //you can overwrite properties
+        }); */
+
+        //Selectors
+        $(document).ready(function() {
+                         //you can overwrite properties
+            //classs or id selectors
+            $('.readydemo').text('WebPage is ready!').css('color','blue').css('font-weight','700').css('color','red').fadeOut("slow").fadeIn('slow') ;
+           
+            //elements selectors
+            $('h1').css('color', 'red').text('heading');
+
+             //attribute selectoors
+             $("a[target  = '_self']").css('color','green');
+             //In case you make amistake
+            $("a[href = 'yahoo.com']").text('Yahoo');
+           $('input[type]').css("border",'1px solid #ff9900');
+           $('a[target = "_self"]').append(' [new window]')
+           
+
+        });
+
+    </script>
+</body>
+</html>
